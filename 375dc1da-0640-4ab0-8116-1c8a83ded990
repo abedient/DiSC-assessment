@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DiSC Assessment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; max-width: 600px; margin: auto; }
+        h2 { text-align: center; }
+        .set { margin-bottom: 30px; }
+        .word { margin: 10px 0; }
+        .word label { display: block; margin-bottom: 5px; }
+        .scores button { margin-right: 5px; padding: 10px; }
+        .scores button:disabled { background-color: #ccc; }
+        #results { margin-top: 40px; }
+        @media (max-width: 600px) {
+            .scores button { padding: 8px; font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+    <h2>DiSC Assessment</h2>
+    <form id="discForm">
+<div class="set" id="set0">
+<h3>Set 1</h3>
+
+        <div class="word">
+            <label>Aggressive</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(0, 0, 4)">4</button>
+                <button type="button" onclick="selectScore(0, 0, 3)">3</button>
+                <button type="button" onclick="selectScore(0, 0, 2)">2</button>
+                <button type="button" onclick="selectScore(0, 0, 1)">1</button>
+            </div>
+        </div>
+        
+        <div class="word">
+            <label>Persuasive</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(0, 1, 4)">4</button>
+                <button type="button" onclick="selectScore(0, 1, 3)">3</button>
+                <button type="button" onclick="selectScore(0, 1, 2)">2</button>
+                <button type="button" onclick="selectScore(0, 1, 1)">1</button>
+            </div>
+        </div>
+        
+        <div class="word">
+            <label>Patient</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(0, 2, 4)">4</button>
+                <button type="button" onclick="selectScore(0, 2, 3)">3</button>
+                <button type="button" onclick="selectScore(0, 2, 2)">2</button>
+                <button type="button" onclick="selectScore(0, 2, 1)">1</button>
+            </div>
+        </div>
+        
+        <div class="word">
+            <label>Precise</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(0, 3, 4)">4</button>
+                <button type="button" onclick="selectScore(0, 3, 3)">3</button>
+                <button type="button" onclick="selectScore(0, 3, 2)">2</button>
+                <button type="button" onclick="selectScore(0, 3, 1)">1</button>
+            </div>
+        </div>
+        </div>
+<div class="set" id="set1">
+<h3>Set 2</h3>
+
+        <div class="word">
+            <label>Bold</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(1, 0, 4)">4</button>
+                <button type="button" onclick="selectScore(1, 0, 3)">3</button>
+                <button type="button" onclick="selectScore(1, 0, 2)">2</button>
+                <button type="button" onclick="selectScore(1, 0, 1)">1</button>
+            </div>
+        </div>
+        
+        <div class="word">
+            <label>Charming</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(1, 1, 4)">4</button>
+                <button type="button" onclick="selectScore(1, 1, 3)">3</button>
+                <button type="button" onclick="selectScore(1, 1, 2)">2</button>
+                <button type="button" onclick="selectScore(1, 1, 1)">1</button>
+            </div>
+        </div>
+        
+        <div class="word">
+            <label>Kind</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(1, 2, 4)">4</button>
+                <button type="button" onclick="selectScore(1, 2, 3)">3</button>
+                <button type="button" onclick="selectScore(1, 2, 2)">2</button>
+                <button type="button" onclick="selectScore(1, 2, 1)">1</button>
+            </div>
+        </div>
+        
+        <div class="word">
+            <label>Careful</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(1, 3, 4)">4</button>
+                <button type="button" onclick="selectScore(1, 3, 3)">3</button>
+                <button type="button" onclick="selectScore(1, 3, 2)">2</button>
+                <button type="button" onclick="selectScore(1, 3, 1)">1</button>
+            </div>
+        </div>
+        </div>
+<div class="set" id="set2">
+<h3>Set 3</h3>
+
+        <div class="word">
+            <label>Confident</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(2, 0, 4)">4</button>
+                <button type="button" onclick="selectScore(2, 0, 3)">3</button>
+                <button type="button" onclick="selectScore(2, 0, 2)">2</button>
+                <button type="button" onclick="selectScore(2, 0, 1)">1</button>
+            </div>
+        </div>
+        
+        <div class="word">
+            <label>Optimistic</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(2, 1, 4)">4</button>
+                <button type="button" onclick="selectScore(2, 1, 3)">3</button>
+                <button type="button" onclick="selectScore(2, 1, 2)">2</button>
+                <button type="button" onclick="selectScore(2, 1, 1)">1</button>
+            </div>
+        </div>
+        
+        <div class="word">
+            <label>Loyal</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(2, 2, 4)">4</button>
+                <button type="button" onclick="selectScore(2, 2, 3)">3</button>
+                <button type="button" onclick="selectScore(2, 2, 2)">2</button>
+                <button type="button" onclick="selectScore(2, 2, 1)">1</button>
+            </div>
+        </div>
+        
+        <div class="word">
+            <label>Cautious</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(2, 3, 4)">4</button>
+                <button type="button" onclick="selectScore(2, 3, 3)">3</button>
+                <button type="button" onclick="selectScore(2, 3, 2)">2</button>
+                <button type="button" onclick="selectScore(2, 3, 1)">1</button>
+            </div>
+        </div>
+        </div>
+<div class="set" id="set3">
+<h3>Set 4</h3>
+
+        <div class="word">
+            <label>Determined</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(3, 0, 4)">4</button>
+                <button type="button" onclick="selectScore(3, 0, 3)">3</button>
+                <button type="button" onclick="selectScore(3, 0, 2)">2</button>
+                <button type="button" onclick="selectScore(3, 0, 1)">1</button>
+            </div>
+        </div>
+        
+        <div class="word">
+            <label>Talkative</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(3, 1, 4)">4</button>
+                <button type="button" onclick="selectScore(3, 1, 3)">3</button>
+                <button type="button" onclick="selectScore(3, 1, 2)">2</button>
+                <button type="button" onclick="selectScore(3, 1, 1)">1</button>
+            </div>
+        </div>
+        
+        <div class="word">
+            <label>Supportive</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(3, 2, 4)">4</button>
+                <button type="button" onclick="selectScore(3, 2, 3)">3</button>
+                <button type="button" onclick="selectScore(3, 2, 2)">2</button>
+                <button type="button" onclick="selectScore(3, 2, 1)">1</button>
+            </div>
+        </div>
+        
+        <div class="word">
+            <label>Orderly</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(3, 3, 4)">4</button>
+                <button type="button" onclick="selectScore(3, 3, 3)">3</button>
+                <button type="button" onclick="selectScore(3, 3, 2)">2</button>
+                <button type="button" onclick="selectScore(3, 3, 1)">1</button>
+            </div>
+        </div>
+        </div>
+<div class="set" id="set4">
+<h3>Set 5</h3>
+
+        <div class="word">
+            <label>Independent</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(4, 0, 4)">4</button>
+                <button type="button" onclick="selectScore(4, 0, 3)">3</button>
+                <button type="button" onclick="selectScore(4, 0, 2)">2</button>
+                <button type="button" onclick="selectScore(4, 0, 1)">1</button>
+            </div>
+        </div>
+        
+        <div class="word">
+            <label>Popular</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(4, 1, 4)">4</button>
+                <button type="button" onclick="selectScore(4, 1, 3)">3</button>
+                <button type="button" onclick="selectScore(4, 1, 2)">2</button>
+                <button type="button" onclick="selectScore(4, 1, 1)">1</button>
+            </div>
+        </div>
+        
+        <div class="word">
+            <label>Gentle</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(4, 2, 4)">4</button>
+                <button type="button" onclick="selectScore(4, 2, 3)">3</button>
+                <button type="button" onclick="selectScore(4, 2, 2)">2</button>
+                <button type="button" onclick="selectScore(4, 2, 1)">1</button>
+            </div>
+        </div>
+        
+        <div class="word">
+            <label>Accurate</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(4, 3, 4)">4</button>
+                <button type="button" onclick="selectScore(4, 3, 3)">3</button>
+                <button type="button" onclick="selectScore(4, 3, 2)">2</button>
+                <button type="button" onclick="selectScore(4, 3, 1)">1</button>
+            </div>
+        </div>
+        </div>
+<div class="set" id="set5">
+<h3>Set 6</h3>
+
+        <div class="word">
+            <label>Assertive</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(5, 0, 4)">4</button>
+                <button type="button" onclick="selectScore(5, 0, 3)">3</button>
+                <button type="button" onclick="selectScore(5, 0, 2)">2</button>
+                <button type="button" onclick="selectScore(5, 0, 1)">1</button>
+            </div>
+        </div>
+        
+        <div class="word">
+            <label>Sociable</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(5, 1, 4)">4</button>
+                <button type="button" onclick="selectScore(5, 1, 3)">3</button>
+                <button type="button" onclick="selectScore(5, 1, 2)">2</button>
+                <button type="button" onclick="selectScore(5, 1, 1)">1</button>
+            </div>
+        </div>
+        
+        <div class="word">
+            <label>Considerate</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(5, 2, 4)">4</button>
+                <button type="button" onclick="selectScore(5, 2, 3)">3</button>
+                <button type="button" onclick="selectScore(5, 2, 2)">2</button>
+                <button type="button" onclick="selectScore(5, 2, 1)">1</button>
+            </div>
+        </div>
+        
+        <div class="word">
+            <label>Systematic</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(5, 3, 4)">4</button>
+                <button type="button" onclick="selectScore(5, 3, 3)">3</button>
+                <button type="button" onclick="selectScore(5, 3, 2)">2</button>
+                <button type="button" onclick="selectScore(5, 3, 1)">1</button>
+            </div>
+        </div>
+        </div>
+<div class="set" id="set6">
+<h3>Set 7</h3>
+
+        <div class="word">
+            <label>Competitive</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(6, 0, 4)">4</button>
+                <button type="button" onclick="selectScore(6, 0, 3)">3</button>
+                <button type="button" onclick="selectScore(6, 0, 2)">2</button>
+                <button type="button" onclick="selectScore(6, 0, 1)">1</button>
+            </div>
+        </div>
+        
+        <div class="word">
+            <label>Inspiring</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(6, 1, 4)">4</button>
+                <button type="button" onclick="selectScore(6, 1, 3)">3</button>
+                <button type="button" onclick="selectScore(6, 1, 2)">2</button>
+                <button type="button" onclick="selectScore(6, 1, 1)">1</button>
+            </div>
+        </div>
+        
+        <div class="word">
+            <label>Tolerant</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(6, 2, 4)">4</button>
+                <button type="button" onclick="selectScore(6, 2, 3)">3</button>
+                <button type="button" onclick="selectScore(6, 2, 2)">2</button>
+                <button type="button" onclick="selectScore(6, 2, 1)">1</button>
+            </div>
+        </div>
+        
+        <div class="word">
+            <label>Meticulous</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(6, 3, 4)">4</button>
+                <button type="button" onclick="selectScore(6, 3, 3)">3</button>
+                <button type="button" onclick="selectScore(6, 3, 2)">2</button>
+                <button type="button" onclick="selectScore(6, 3, 1)">1</button>
+            </div>
+        </div>
+        </div>
+<div class="set" id="set7">
+<h3>Set 8</h3>
+
+        <div class="word">
+            <label>Decisive</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(7, 0, 4)">4</button>
+                <button type="button" onclick="selectScore(7, 0, 3)">3</button>
+                <button type="button" onclick="selectScore(7, 0, 2)">2</button>
+                <button type="button" onclick="selectScore(7, 0, 1)">1</button>
+            </div>
+        </div>
+        
+        <div class="word">
+            <label>Expressive</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(7, 1, 4)">4</button>
+                <button type="button" onclick="selectScore(7, 1, 3)">3</button>
+                <button type="button" onclick="selectScore(7, 1, 2)">2</button>
+                <button type="button" onclick="selectScore(7, 1, 1)">1</button>
+            </div>
+        </div>
+        
+        <div class="word">
+            <label>Calm</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(7, 2, 4)">4</button>
+                <button type="button" onclick="selectScore(7, 2, 3)">3</button>
+                <button type="button" onclick="selectScore(7, 2, 2)">2</button>
+                <button type="button" onclick="selectScore(7, 2, 1)">1</button>
+            </div>
+        </div>
+        
+        <div class="word">
+            <label>Logical</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(7, 3, 4)">4</button>
+                <button type="button" onclick="selectScore(7, 3, 3)">3</button>
+                <button type="button" onclick="selectScore(7, 3, 2)">2</button>
+                <button type="button" onclick="selectScore(7, 3, 1)">1</button>
+            </div>
+        </div>
+        </div>
+<div class="set" id="set8">
+<h3>Set 9</h3>
+
+        <div class="word">
+            <label>Risk-taker</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(8, 0, 4)">4</button>
+                <button type="button" onclick="selectScore(8, 0, 3)">3</button>
+                <button type="button" onclick="selectScore(8, 0, 2)">2</button>
+                <button type="button" onclick="selectScore(8, 0, 1)">1</button>
+            </div>
+        </div>
+        
+        <div class="word">
+            <label>Friendly</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(8, 1, 4)">4</button>
+                <button type="button" onclick="selectScore(8, 1, 3)">3</button>
+                <button type="button" onclick="selectScore(8, 1, 2)">2</button>
+                <button type="button" onclick="selectScore(8, 1, 1)">1</button>
+            </div>
+        </div>
+        
+        <div class="word">
+            <label>Good-natured</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(8, 2, 4)">4</button>
+                <button type="button" onclick="selectScore(8, 2, 3)">3</button>
+                <button type="button" onclick="selectScore(8, 2, 2)">2</button>
+                <button type="button" onclick="selectScore(8, 2, 1)">1</button>
+            </div>
+        </div>
+        
+        <div class="word">
+            <label>Exacting</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(8, 3, 4)">4</button>
+                <button type="button" onclick="selectScore(8, 3, 3)">3</button>
+                <button type="button" onclick="selectScore(8, 3, 2)">2</button>
+                <button type="button" onclick="selectScore(8, 3, 1)">1</button>
+            </div>
+        </div>
+        </div>
+<div class="set" id="set9">
+<h3>Set 10</h3>
+
+        <div class="word">
+            <label>Leader</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(9, 0, 4)">4</button>
+                <button type="button" onclick="selectScore(9, 0, 3)">3</button>
+                <button type="button" onclick="selectScore(9, 0, 2)">2</button>
+                <button type="button" onclick="selectScore(9, 0, 1)">1</button>
+            </div>
+        </div>
+        
+        <div class="word">
+            <label>Enthusiastic</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(9, 1, 4)">4</button>
+                <button type="button" onclick="selectScore(9, 1, 3)">3</button>
+                <button type="button" onclick="selectScore(9, 1, 2)">2</button>
+                <button type="button" onclick="selectScore(9, 1, 1)">1</button>
+            </div>
+        </div>
+        
+        <div class="word">
+            <label>Reliable</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(9, 2, 4)">4</button>
+                <button type="button" onclick="selectScore(9, 2, 3)">3</button>
+                <button type="button" onclick="selectScore(9, 2, 2)">2</button>
+                <button type="button" onclick="selectScore(9, 2, 1)">1</button>
+            </div>
+        </div>
+        
+        <div class="word">
+            <label>Thorough</label>
+            <div class="scores">
+                <button type="button" onclick="selectScore(9, 3, 4)">4</button>
+                <button type="button" onclick="selectScore(9, 3, 3)">3</button>
+                <button type="button" onclick="selectScore(9, 3, 2)">2</button>
+                <button type="button" onclick="selectScore(9, 3, 1)">1</button>
+            </div>
+        </div>
+        </div>
+
+    <button type="button" onclick="showResults()">Submit</button>
+    </form>
+    <div id="results"></div>
+
+    <script>
+        const selections = {};
+
+        function selectScore(setIndex, wordIndex, score) {
+            if (!selections[setIndex]) selections[setIndex] = {};
+            selections[setIndex][wordIndex] = score;
+
+            // Disable selected score for other words in the same set
+            const setDiv = document.getElementById('set' + setIndex);
+            const buttons = setDiv.querySelectorAll('.scores button');
+            buttons.forEach(btn => {
+                const btnScore = parseInt(btn.textContent);
+                btn.disabled = Object.values(selections[setIndex]).includes(btnScore);
+            });
+        }
+
+        function showResults() {
+            let output = '<h3>Your Selections</h3><ul>';
+            for (let set in selections) {
+                output += `<li>Set ${parseInt(set)+1}: `;
+                let scores = selections[set];
+                let words = document.querySelectorAll('#set' + set + ' .word label');
+                let wordScores = [];
+                for (let i = 0; i < words.length; i++) {
+                    wordScores.push(`${words[i].textContent} (${scores[i] || 'N/A'})`);
+                }
+                output += wordScores.join(', ') + '</li>';
+            }
+            output += '</ul>';
+            document.getElementById('results').innerHTML = output;
+        }
+    </script>
+</body>
+</html>
